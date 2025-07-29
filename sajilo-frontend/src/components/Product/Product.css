@@ -1,0 +1,192 @@
+.listproduct {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  max-height: 90vh;
+  padding: 30px 40px;
+  margin: 100px auto;
+  border-radius: 20px;
+  background: #ffffff; /* solid white */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1); /* soft shadow */
+  overflow: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2e2e2e; /* dark text */
+}
+
+.listproduct-header {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+.add-product-button {
+  padding: 12px 28px;
+  background: #007bff; /* bright blue */
+  border-radius: 30px;
+  border: none;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.add-product-button:hover {
+  background: #0056b3;
+  box-shadow: 0 8px 24px rgba(0, 86, 179, 0.4);
+}
+
+.listproduct-format-main {
+  display: grid;
+  grid-template-columns: 1fr 2.5fr 1fr 1fr 1.5fr;
+  gap: 20px;
+  width: 100%;
+  padding: 15px 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: #6c757d; /* muted dark gray */
+  border-bottom: 1.5px solid #dee2e6; /* light gray line */
+}
+
+.listproduct-format {
+  display: grid;
+  grid-template-columns: 1fr 2.5fr 1fr 1fr 1.5fr;
+  gap: 20px;
+  width: 100%;
+  align-items: center;
+  padding: 18px 0;
+  font-weight: 500;
+  border-bottom: 1px solid #e9ecef; /* very light gray */
+  transition: background 0.3s ease;
+  cursor: default;
+}
+
+.listproduct-format:hover {
+  background: #f8f9fa; /* subtle light hover */
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.listproduct-product-icon {
+  height: 90px;
+  width: 90px;
+  border-radius: 15px;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.listproduct-format:hover .listproduct-product-icon {
+  transform: scale(1.05);
+}
+
+.edit-product-button,
+.remove-product-button {
+  padding: 10px 18px;
+  border-radius: 25px;
+  border: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  color: white;
+  margin-left: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.edit-product-button {
+  background: #6c757d; /* muted gray */
+}
+
+.edit-product-button:hover {
+  background: #495057;
+  box-shadow: 0 6px 18px #495057aa;
+}
+
+.remove-product-button {
+  background: #dc3545; /* bootstrap red */
+}
+
+.remove-product-button:hover {
+  background: #b02a37;
+  box-shadow: 0 6px 18px #b02a37cc;
+}
+
+.listproduct-allproducts {
+  width: 100%;
+  max-height: 65vh;
+  overflow-y: auto;
+  margin-top: 20px;
+  scrollbar-width: thin;
+  scrollbar-color: #adb5bd transparent;
+}
+
+.listproduct-allproducts::-webkit-scrollbar {
+  width: 8px;
+}
+
+.listproduct-allproducts::-webkit-scrollbar-thumb {
+  background-color: #adb5bd;
+  border-radius: 10px;
+}
+
+.listproduct-allproducts::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.listproduct-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.logs-button {
+  background-color: #2196f3;  /* Blue */
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.logs-button:hover {
+  background-color: #0b7dda;  /* Darker blue on hover */
+}
+
+@media (max-width: 900px) {
+  .listproduct-format-main,
+  .listproduct-format {
+    grid-template-columns: 1fr 2fr 1fr 1fr 1.5fr;
+    font-size: 0.9rem;
+  }
+
+  .listproduct-product-icon {
+    height: 70px;
+    width: 70px;
+  }
+
+  .add-product-button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .listproduct-format-main,
+  .listproduct-format {
+    grid-template-columns: 1fr 3fr 1fr 1fr;
+    gap: 12px;
+  }
+
+  .remove-product-button {
+    margin-left: 5px;
+  }
+}
