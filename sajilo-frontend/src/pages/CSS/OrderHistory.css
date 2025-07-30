@@ -1,0 +1,158 @@
+/* Container */
+.order-history {
+    max-width: 90vw;
+    margin: 85px auto;
+    padding: 40px 30px;
+    border-radius: 25px;
+    background: #f5fff2;
+    border: 2px solid #b7e19e;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 0 0 12px rgba(177, 219, 143, 0.4);
+}
+
+/* Heading */
+.order-history h2 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #2c3e50;
+}
+
+/* List */
+.order-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* Link */
+.order-link {
+    text-decoration: none;
+    border-radius: 16px;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+/* Card */
+.order-card {
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 18px 22px;
+    border-left: 6px solid #8bc34a;
+    border-right: 6px solid #fdd835;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.25s ease;
+}
+
+/* Hover */
+.order-link:hover .order-card {
+    transform: translateY(-4px) scale(1.01);
+    background-color: #f9fff5;
+}
+
+/* Image */
+.order-image {
+    width: 85px;
+    height: 85px;
+    object-fit: cover;
+    border-radius: 14px;
+    margin-right: 22px;
+}
+
+/* Details */
+.order-details {
+    flex: 1;
+}
+
+/* Text */
+.order-details p {
+    margin: 5px 0;
+    font-size: 1.1rem;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.order-details p strong {
+    color: #1b5e20;
+}
+
+/* Order number bigger */
+.order-number {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #33691e;
+}
+
+/* Loading */
+.loading {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #558b2f;
+}
+
+/* Pagination */
+.pagination {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    color: #33691e;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+/* Pagination buttons */
+.pagination button {
+    background: #8bc34a;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 22px;
+    color: white;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Disabled */
+.pagination button:disabled {
+    background: #c5e1a5;
+    cursor: not-allowed;
+}
+
+/* Button hover */
+.pagination button:not(:disabled):hover {
+    background: #689f38;
+    transform: scale(1.1);
+}
+
+/* Pagination text */
+.pagination span {
+    user-select: none;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .order-card {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+
+    .order-image {
+        width: 100%;
+        height: 180px;
+        margin: 0 0 15px 0;
+        border-radius: 18px;
+    }
+
+    .pagination {
+        flex-direction: column;
+        gap: 15px;
+    }
+}

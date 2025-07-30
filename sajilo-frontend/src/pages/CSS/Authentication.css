@@ -1,0 +1,189 @@
+.login-green-wrapper {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #d4edda 0%, #fffbe6 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 15px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.login-green-container {
+  background: white;
+  border-radius: 24px;
+  padding: 50px 40px;
+  width: 480px; /* wider container */
+  max-width: 95vw;
+  box-shadow: 0 12px 30px rgba(40, 167, 69, 0.25);
+  text-align: center;
+}
+
+.login-green-title {
+  color: #28a745;
+  font-size: 40px; /* slightly bigger */
+  margin-bottom: 12px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.login-green-subtitle {
+  color: #ffcd39;
+  font-size: 20px;
+  margin-bottom: 40px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.login-green-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px; /* bigger gaps */
+  width: 100%;
+  align-items: stretch;
+}
+
+.login-green-label {
+  font-weight: 600;
+  color: #333;
+  text-align: left;
+  margin-bottom: 8px;
+  font-size: 17px;
+}
+
+.login-green-input {
+  padding: 16px 48px 16px 18px; /* padding right leaves space for show btn */
+  font-size: 17px;
+  border-radius: 14px;
+  border: 2px solid #28a745;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: inset 0 2px 5px rgba(40, 167, 69, 0.1);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-green-input:focus {
+  border-color: #ffcd39;
+  box-shadow: 0 0 8px #ffcd39;
+}
+
+.error-input {
+  border-color: #dc3545 !important;
+}
+
+.error-text {
+  color: #dc3545;
+  font-size: 15px;
+  margin-top: 6px;
+  margin-bottom: 12px;
+  text-align: left;
+  line-height: 1.2;
+}
+
+.password-input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.show-hide-btn {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #28a745;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 15px;
+  user-select: none;
+  padding: 2px 6px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.show-hide-btn:hover {
+  background-color: #d4edda;
+}
+
+.login-green-submit {
+  background: linear-gradient(45deg, #28a745, #a1d99b);
+  color: white;
+  border: none;
+  border-radius: 14px;
+  padding: 18px 0;
+  font-size: 22px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(40, 167, 69, 0.6);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-green-submit:hover {
+  background: linear-gradient(45deg, #218838, #7bc47b);
+  box-shadow: 0 10px 28px rgba(33, 136, 56, 0.8);
+}
+
+.forgot-password-text {
+  margin-top: 25px;
+  color: #ffcd39;
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.3s ease;
+  font-size: 16px;
+}
+
+.forgot-password-text:hover {
+  color: #ffc107;
+}
+
+.signup-text {
+  margin-top: 22px;
+  font-size: 17px;
+  color: #555;
+}
+
+.signup-link {
+  color: #28a745;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.signup-link:hover {
+  text-decoration: underline;
+}
+
+/* Modal styling: increase modal width and padding */
+.modal-content {
+  width: 420px;
+  padding: 35px 30px;
+  border-radius: 18px;
+  box-shadow: 0 14px 36px rgba(40, 167, 69, 0.35);
+}
+
+/* Modal inputs bigger */
+.modal-input {
+  font-size: 17px;
+  padding: 14px 18px;
+  border-radius: 14px;
+}
+
+/* Modal buttons bigger & padded */
+.modal-button {
+  padding: 16px 0;
+  font-size: 20px;
+  border-radius: 14px;
+}
+
+/* Responsive improvements */
+@media(max-width: 600px) {
+  .login-green-container {
+    width: 100%;
+    padding: 40px 25px;
+  }
+  .modal-content {
+    width: 95%;
+    padding: 30px 20px;
+  }
+}

@@ -1,0 +1,127 @@
+.order-container {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 40px 30px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f6fff2;
+  border-radius: 24px;
+  box-shadow: 0 8px 28px rgba(139, 195, 74, 0.15);
+  color: #2a3a1b;
+}
+
+.order-title {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 36px;
+  text-align: center;
+  color: #33691e;
+  text-shadow: 0 0 6px rgba(182, 211, 122, 0.5);
+}
+
+.order-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 36px;
+}
+
+.order-summary,
+.order-items {
+  flex: 1;
+  min-width: 320px;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 28px 30px;
+  box-shadow: 0 6px 20px rgba(139, 195, 74, 0.2);
+  border: 2px solid #dcedc8;
+  transition: box-shadow 0.3s ease;
+}
+
+.order-summary:hover,
+.order-items:hover {
+  box-shadow: 0 10px 30px rgba(139, 195, 74, 0.35);
+}
+
+.order-summary h3,
+.order-items h3 {
+  font-size: 22px;
+  margin-bottom: 24px;
+  border-bottom: 2px solid #fdd835;
+  padding-bottom: 12px;
+  color: #7b9e32;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 14px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #558b2f;
+}
+
+.order-items {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.item-card {
+  display: flex;
+  gap: 18px;
+  padding: 18px;
+  border-radius: 14px;
+  background-color: #f0f9e8;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(107, 142, 35, 0.15);
+  transition: box-shadow 0.3s ease;
+  cursor: default;
+}
+
+.item-card:hover {
+  box-shadow: 0 6px 20px rgba(139, 195, 74, 0.3);
+}
+
+.item-card img {
+  width: 88px;
+  height: 88px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 2px solid #cddc39;
+  box-shadow: 0 2px 6px rgba(174, 214, 111, 0.4);
+}
+
+.item-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.item-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: #558b2f;
+  letter-spacing: 0.02em;
+}
+
+.item-meta {
+  font-size: 15px;
+  color: #7c9a30;
+  font-weight: 500;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .order-content {
+    flex-direction: column;
+  }
+  
+  .order-summary,
+  .order-items {
+    min-width: 100%;
+  }
+  
+  .item-card {
+    justify-content: flex-start;
+  }
+}

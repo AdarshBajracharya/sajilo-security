@@ -1,0 +1,136 @@
+.order-page {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 30px 20px;
+  font-family: 'Segoe UI', sans-serif;
+  color: #1b1c1e;
+}
+
+.order-page h1 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #2e7d32;
+}
+
+.order-content {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.cart-items,
+.user-details {
+  flex: 1;
+  min-width: 340px;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.cart-items h2,
+.user-details h2 {
+  font-size: 22px;
+  margin-bottom: 24px;
+  border-left: 6px solid #fbc02d;
+  padding-left: 12px;
+}
+
+.cart-items ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cart-items li {
+  background-color: #f5f5f5;
+  margin-bottom: 16px;
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  gap: 16px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.cart-items li:hover {
+  transform: scale(1.01);
+  transition: all 0.2s ease-in-out;
+}
+
+.item-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.item-title {
+  font-weight: 600;
+  font-size: 17px;
+  margin-bottom: 6px;
+}
+
+.cart-items input[type="number"] {
+  width: 70px;
+  padding: 6px 8px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-top: 6px;
+}
+
+.cart-items h3 {
+  margin-top: 20px;
+  font-size: 20px;
+  color: #388e3c;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 10px 12px;
+  font-size: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  transition: border-color 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #4caf50;
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.order-button {
+  margin-top: 20px;
+  background-color: #4caf50;
+  color: #fff;
+  padding: 14px 20px;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.2s;
+}
+
+.order-button:hover {
+  background-color: #388e3c;
+}
