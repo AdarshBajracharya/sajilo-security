@@ -1,211 +1,155 @@
 .addproduct {
-    width: 480px;
-    max-width: 95vw;
-    padding: 35px 40px;
-    margin: 95px auto;
-    border-radius: 28px;
-    background: rgba(255, 255, 255, 0.28);
-    box-shadow: 0 8px 32px rgba(255, 65, 65, 0.12);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1.8px solid rgba(255, 65, 65, 0.22);
-    display: flex;
-    flex-direction: column;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #3a3a3a;
-    user-select: none;
+  max-width: 480px;
+  margin: 70px auto;
+  padding: 35px 40px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(34, 139, 34, 0.15); /* subtle green shadow */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2a4d2b;
+  user-select: none;
 }
 
 .addproduct h1 {
-    text-align: center;
-    font-weight: 700;
-    font-size: 2.3rem;
-    margin-bottom: 32px;
-    color: #ff3a3a;
-    letter-spacing: 1.5px;
-    text-shadow: 0 0 5px rgba(255, 65, 65, 0.45);
+  text-align: center;
+  font-weight: 700;
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  color: #3a7d44;
+  letter-spacing: 1.1px;
 }
 
 .addproduct-itemfield {
-    position: relative;
-    margin-bottom: 28px;
+  margin-bottom: 22px;
+  display: flex;
+  flex-direction: column;
 }
 
-/* Inputs & Selects */
+.addproduct-itemfield p {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 8px;
+  color: #4a752d;
+}
+
 .addproduct-itemfield input,
 .addproduct-itemfield select {
-    width: 100%;
-    height: 46px;
-    padding: 12px 18px 12px 18px;
-    border-radius: 18px;
-    border: 2px solid rgba(255, 65, 65, 0.28);
-    background: rgba(255, 255, 255, 0.7);
-    font-size: 1rem;
-    font-weight: 600;
-    color: #3a3a3a;
-    transition: all 0.3s ease;
-    box-shadow: inset 1px 1px 8px rgba(255, 255, 255, 0.6);
-    -webkit-appearance: none;
-    /* Remove default arrow in select */
-    -moz-appearance: none;
-    appearance: none;
+  height: 44px;
+  padding: 0 15px;
+  border-radius: 8px;
+  border: 2px solid #c6e4a1; /* pale green border */
+  background: #f9fff1;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #35692d;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* For select arrow styling (optional) */
-.addproduct-itemfield select {
-    background-image: url('data:image/svg+xml;utf8,<svg fill="%23ff4141" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
-    background-repeat: no-repeat;
-    background-position: right 14px center;
-    background-size: 18px 18px;
-    padding-right: 42px;
-}
-
-/* Floating label text */
-.addproduct-itemfield p {
-    position: absolute;
-    left: 20px;
-    top: 14px;
-    font-weight: 700;
-    font-size: 0.85rem;
-    color: #b33838;
-    pointer-events: none;
-    transition: all 0.3s ease;
-    background: transparent;
-    user-select: none;
-}
-
-/* When input/select focused or has content, move label */
-.addproduct-itemfield input:focus+p,
-.addproduct-itemfield input:not(:placeholder-shown)+p,
-.addproduct-itemfield select:focus+p,
-.addproduct-itemfield select:not([value=""])+p {
-    top: -12px;
-    font-size: 0.72rem;
-    color: #ff4141;
-    background: #fff;
-    padding: 0 8px;
-    border-radius: 12px;
-}
-
-/* Input focus styles */
 .addproduct-itemfield input:focus,
 .addproduct-itemfield select:focus {
-    outline: none;
-    border-color: #ff4141;
-    background: rgba(255, 255, 255, 0.95);
-    box-shadow: 0 0 12px rgba(255, 65, 65, 0.48);
+  outline: none;
+  border-color: #7dc242; /* stronger green */
+  box-shadow: 0 0 8px #a8d56e66;
+  background: #ffffff;
 }
 
-/* Image upload label */
+.addproduct-itemfield select {
+  background-image: url('data:image/svg+xml;utf8,<svg fill="%237dc242" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 18px 18px;
+  padding-right: 40px;
+}
+
+/* Image upload */
+.image-upload {
+  margin-bottom: 30px;
+  position: relative;
+  cursor: pointer;
+}
+
 .file-input-label {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 120px;
-    border: 2.5px dashed rgba(255, 65, 65, 0.4);
-    border-radius: 24px;
-    color: #ff4141;
-    font-weight: 600;
-    font-size: 1rem;
-    cursor: pointer;
-    background: rgba(255, 255, 255, 0.6);
-    transition: border-color 0.3s ease, background-color 0.3s ease;
-    user-select: none;
-    text-align: center;
-    margin-bottom: 10px;
-    overflow: hidden;
-    position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 140px;
+  border: 2.5px dashed #a7c94c; /* mellow yellow-green */
+  border-radius: 12px;
+  color: #a7c94c;
+  font-weight: 700;
+  font-size: 1.1rem;
+  background: #f5f9e9;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  user-select: none;
+  text-align: center;
 }
 
-/* Hover on upload area */
 .file-input-label:hover {
-    border-color: #ff1a1a;
-    background: rgba(255, 65, 65, 0.1);
+  background: #e8f0c9;
+  border-color: #8cb52d;
 }
 
-/* Image preview inside upload */
+.image-wrapper {
+  width: 100%;
+  height: 140px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
 .addproduct-thumbnail-img {
-    max-height: 100%;
-    max-width: 100%;
-    border-radius: 20px;
-    object-fit: contain; /* or cover if you want cropping */
-    box-shadow: 0 5px 15px rgba(255, 65, 65, 0.25);
-    transition: transform 0.35s ease;
-    display: block;
-    margin: auto;
+  width: 100%;
+  height: 140px;
+  object-fit: contain;
+  box-shadow: 0 4px 10px #b1d57a88;
+  transition: transform 0.3s ease;
 }
 
-/* Submit button */
+/* Button */
 .addproduct-btn {
-    width: 100%;
-    height: 52px;
-    background: linear-gradient(135deg, #ff3a3a, #ff6f6f);
-    border: none;
-    border-radius: 28px;
-    color: white;
-    font-weight: 800;
-    font-size: 1.15rem;
-    letter-spacing: 1px;
-    cursor: pointer;
-    box-shadow: 0 8px 24px rgba(255, 65, 65, 0.5);
-    transition: all 0.3s ease;
-    user-select: none;
+  width: 100%;
+  height: 48px;
+  background: #a7c94c;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #344e1e;
+  cursor: pointer;
+  box-shadow: 0 5px 15px #9ab946aa;
+  transition: background 0.3s ease;
+  user-select: none;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
 }
 
 .addproduct-btn:hover {
-    background: linear-gradient(135deg, #ff1a1a, #ff3a3a);
-    box-shadow: 0 10px 40px rgba(255, 26, 26, 0.8);
+  background: #8cb52d;
+  box-shadow: 0 6px 20px #7d9e20cc;
 }
 
-/* Error message */
+/* Error messages */
 .text-danger {
-    font-size: 0.8rem;
-    color: #b00020;
-    font-weight: 700;
-    margin-top: 6px;
+  font-size: 0.85rem;
+  color: #b00020;
+  font-weight: 700;
+  margin-top: 5px;
+  letter-spacing: 0.5px;
 }
 
-/* Responsive */
+/* Responsive tweaks */
 @media (max-width: 480px) {
-    .addproduct {
-        width: 90vw;
-        padding: 25px 20px;
-        border-radius: 16px;
-    }
+  .addproduct {
+    max-width: 95vw;
+    padding: 25px 20px;
+  }
 
-    .addproduct-btn {
-        font-size: 1rem;
-    }
-}
+  .addproduct h1 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
 
-.form-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px 40px;
-    /* 30px row-gap, 40px column-gap */
-    margin-bottom: 30px;
-}
-
-/* Make sure errors are spaced nicely below inputs */
-.text-danger {
-    margin-top: 6px;
-}
-
-/* Image upload full width below fields */
-.image-upload {
-    margin-bottom: 30px;
-}
-
-/* Adjust input and select height for better feel */
-.addproduct-itemfield input,
-.addproduct-itemfield select {
-    height: 48px;
-    font-size: 1rem;
-    padding-left: 18px;
-    padding-right: 18px;
-}
-
-/* Button style remains as is, but add margin top */
-.addproduct-btn {
-    margin-top: 10px;
+  .file-input-label,
+  .addproduct-thumbnail-img {
+    height: 110px;
+  }
 }

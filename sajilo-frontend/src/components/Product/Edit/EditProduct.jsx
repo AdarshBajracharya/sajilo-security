@@ -11,7 +11,7 @@ const EditProduct = () => {
     name: "",
     description: "",
     image: "",
-    category: "women",
+    category: "Fruits",
     price: ""
   });
 
@@ -103,9 +103,12 @@ const EditProduct = () => {
             className="add-product-selector"
             placeholder=" "
           >
-            <option value="women">Women</option>
-            <option value="men">Men</option>
-            <option value="kid">Kid</option>
+            <option value="Fruits">Fruits</option>
+            <option value="Vegetables">Vegetables</option>
+            <option value="Frozen Food">Frozen Foods</option>
+            <option value="Canned Food">Canned Food</option>
+            <option value="Dairy">Dairy</option>
+            <option value="Household Goods">Household Goods</option>
           </select>
           <p>Product category</p>
         </div>

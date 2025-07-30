@@ -1,13 +1,11 @@
 /* Container & Typography */
 .popular {
   max-width: 1300px;
-  margin-top: 60px;
-  margin-right: auto;
-  margin-bottom: 100px;
-  margin-left: 400px;
+  margin: 60px auto 140px;
   padding: 0 20px;
   font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #1a8c32; /* dark green text */
+  color: #1a8c32;
+  /* dark green text */
   transition: color 0.3s ease;
 }
 
@@ -141,7 +139,7 @@
   padding-bottom: 40px;
 }
 
-.popular-list > * {
+.popular-list>* {
   background: #e6f3e8;
   border-radius: 16px;
   box-shadow: 0 8px 20px rgba(26, 140, 50, 0.1);
@@ -150,7 +148,7 @@
   cursor: pointer;
 }
 
-.popular-list > *:hover {
+.popular-list>*:hover {
   transform: translateY(-8px);
   box-shadow: 0 20px 45px rgba(26, 140, 50, 0.25);
 }
@@ -171,6 +169,7 @@
     flex-direction: column;
     gap: 16px;
   }
+
   .popular-list {
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   }

@@ -1,0 +1,114 @@
+.profile-container {
+  max-width: 850px;
+  margin: 50px auto;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 24px;
+  backdrop-filter: blur(14px);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 24px rgba(100, 255, 100, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  animation: fadeInSlide 0.6s ease-in-out;
+}
+
+.profile-header {
+  text-align: center;
+}
+
+.profile-header h2 {
+  font-size: 30px;
+  color: #145a32;
+  font-weight: bold;
+}
+
+.profile-header p {
+  font-size: 16px;
+  color: #444;
+}
+
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 10px 20px;
+}
+
+.input-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.input-box input {
+  padding: 14px 16px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.5);
+  border: 2px solid #aee571;
+  color: #333;
+  font-size: 16px;
+  transition: 0.3s ease;
+  outline: none;
+}
+
+.input-box input:focus {
+  border-color: #81c784;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.input-box label {
+  position: absolute;
+  top: 12px;
+  left: 16px;
+  color: #555;
+  font-size: 14px;
+  background: transparent;
+  pointer-events: none;
+  transition: 0.3s ease;
+}
+
+.input-box input:focus + label,
+.input-box input:not(:placeholder-shown) + label,
+.input-box input:not(:placeholder-shown)[disabled] + label {
+  top: -10px;
+  left: 12px;
+  font-size: 12px;
+  background: #f0f0f0;
+  padding: 0 4px;
+  color: #145a32;
+  border-radius: 4px;
+}
+
+.save-button {
+  padding: 14px 20px;
+  border: none;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #cddc39, #8bc34a);
+  color: #145a32;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  align-self: center;
+  width: 50%;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 18px rgba(139, 195, 74, 0.4);
+}
+
+.save-button:hover {
+  background: linear-gradient(135deg, #aed581, #9ccc65);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(139, 195, 74, 0.6);
+}
+
+@keyframes fadeInSlide {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

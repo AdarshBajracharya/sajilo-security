@@ -37,7 +37,7 @@ const ListProduct = () => {
 
   return (
     <div className="listproduct">
-      <h1>Products</h1>
+      <h1>Manage Products</h1>
       <div className="listproduct-header" style={{ display: "flex", gap: "1rem" }}>
         <a rel="stylesheet" href="/admin/logs">
           <button className="logs-button">View Logs</button>
