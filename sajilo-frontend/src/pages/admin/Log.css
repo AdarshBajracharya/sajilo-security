@@ -1,0 +1,119 @@
+.activity-log-container {
+  max-width: 1000px;
+  margin: 85px auto;
+  padding: 2rem 1rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(34, 97, 26, 0.15);
+  user-select: none;
+}
+
+.activity-log-container h2 {
+  font-weight: 700;
+  font-size: 2.2rem;
+  color: #2e7d32; /* dark green */
+  margin-bottom: 1.8rem;
+  text-align: center;
+  letter-spacing: 1.2px;
+  text-shadow: 0 0 5px rgba(46, 125, 50, 0.3);
+}
+
+.activity-log-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Card for each log */
+.activity-log-card {
+  background: #e8f5e9; /* very light green */
+  border-left: 8px solid #aed581; /* lime green */
+  border-radius: 10px;
+  padding: 20px 24px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.3s ease;
+  cursor: default;
+  color: #2e2e2e;
+}
+
+.activity-log-card:hover {
+  box-shadow: 0 12px 30px rgba(46, 125, 50, 0.3);
+}
+
+.activity-log-card > div {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+/* Label for fields */
+.activity-log-card > div > strong {
+  color: #558b2f; /* medium green */
+  font-weight: 700;
+  margin-right: 8px;
+}
+
+/* Details list styling */
+.activity-log-card ul {
+  margin: 6px 0 0 20px;
+  padding: 0;
+  list-style-type: disc;
+  max-height: 120px;
+  overflow-y: auto;
+  color: #33691e; /* dark lime green */
+  font-size: 0.9rem;
+}
+
+/* Scrollbar styling for details list */
+.activity-log-card ul::-webkit-scrollbar {
+  width: 6px;
+}
+
+.activity-log-card ul::-webkit-scrollbar-thumb {
+  background-color: #9ccc65;
+  border-radius: 3px;
+}
+
+.activity-log-card ul::-webkit-scrollbar-track {
+  background: #e8f5e9;
+}
+
+/* Loading and error messages */
+.error {
+  color: #d32f2f; /* red */
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.loading,
+.no-logs {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #558b2f;
+  font-weight: 600;
+  margin-top: 1.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .activity-log-container {
+    padding: 1rem;
+    margin: 40px auto;
+  }
+
+  .activity-log-card {
+    padding: 15px 18px;
+  }
+
+  .activity-log-card > div {
+    font-size: 0.95rem;
+  }
+
+  .activity-log-card ul {
+    font-size: 0.85rem;
+    max-height: 100px;
+  }
+}
