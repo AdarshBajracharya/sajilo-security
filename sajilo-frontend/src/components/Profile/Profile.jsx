@@ -28,9 +28,16 @@ const Profile = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    const tagPattern = /<[^>]*>/g; // Regex to detect HTML tags
+    if (tagPattern.test(user.fullName) || tagPattern.test(user.phone)) {
+      toast.error("Invalid characters detected. Please refrain from using HTML tags.");
+      return;
+    }
+
     const userData = {
-      fullName: user.fullName,
-      phone: user.phone,
+      fullName: user.fullName.trim(),
+      phone: user.phone.trim(),
     };
 
     updateUserApi(userData)
