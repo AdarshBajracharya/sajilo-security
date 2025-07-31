@@ -42,7 +42,6 @@ const createUser = async (req, res) => {
       });
     }
 
-    // New user creation
     const salt = await bcrypt.genSalt(10);
     const hashedPassword = await bcrypt.hash(password, salt);
 
@@ -115,13 +114,11 @@ const loginUser = async (req, res) => {
     if (!isMatch) {
       user.failedLoginAttempts += 1;
 
-      // 🔐 Account lock after 5 failed attempts
       if (user.failedLoginAttempts >= 5) {
         user.isLocked = true;
-        user.lockUntil = new Date(Date.now() + 15 * 60 * 1000); // 15 minutes
+        user.lockUntil = new Date(Date.now() + 15 * 60 * 1000); 
         await user.save();
 
-        // 🔒 Log account lock
         await logActivity({
           req,
           userId: user._id,
