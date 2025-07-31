@@ -33,9 +33,8 @@ import ListOrder from './components/Order/Order';
 import PaymentSuccess from './utils/payment/PaymentSuccess';
 import UnauthorizedPage from './pages/unauthorized/Unauthorized';
 import ActivityLogPage from './pages/admin/Log.tsx';
-// import ActivityLogPage from './pages/admin/Log';
 
-// ✅ Create a wrapper component for logic using useLocation
+
 const AppWrapper = () => {
   const location = useLocation();
   const hideNavbarOnPaths = ['/login', '/register'];
@@ -43,7 +42,6 @@ const AppWrapper = () => {
   const isAuthPage = hideNavbarOnPaths.includes(location.pathname);
 
   if (isAuthPage) {
-    // ✅ For login/register, no Navbar or wrapper div
     return (
       <>
         <ToastContainer />
@@ -55,14 +53,12 @@ const AppWrapper = () => {
     );
   }
 
-  // ✅ For all other pages, wrap with layout
   return (
     <div className="page-wrapper">
       <Navbar />
       <div className="page-content">
         <ToastContainer />
         <Routes>
-          {/* User routes */}
           <Route element={<UserRoute />}>
             <Route path='/' element={<Homepage />} />
             <Route path='/product/:id' element={<Product />} />
@@ -77,8 +73,6 @@ const AppWrapper = () => {
             <Route path='/profile' element={<Account />} />
             <Route path='/payment-success' element={<PaymentSuccess />} />
           </Route>
-
-          {/* Admin routes */}
           <Route element={<AdminRoute />}>
             <Route path='/admin/dashboard' element={<AdminDashboard />} />
             <Route path='/admin/logs' element={<ActivityLogPage />} />
@@ -89,7 +83,6 @@ const AppWrapper = () => {
             <Route path='/admin/dashboard/orders' element={<ListOrder />} />
           </Route>
 
-          {/* Fallback */}
           <Route path='/unauthorized' element={<UnauthorizedPage />} />
         </Routes>
       </div>
@@ -97,7 +90,6 @@ const AppWrapper = () => {
   );
 };
 
-// ✅ Wrap everything under Router
 function App() {
   return (
     <Router>

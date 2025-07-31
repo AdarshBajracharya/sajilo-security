@@ -24,13 +24,11 @@ const createUser = async (req, res) => {
     let user = await userModel.findOne({ email });
 
     if (user) {
-      // User already exists - resend OTP
       user.otp = otp;
       await user.save();
 
       await sendOtpEmail(email, otp);
 
-      // ✅ log activity (existing user - resend OTP)
       await logActivity({
         req,
         userId: user._id,
@@ -59,7 +57,6 @@ const createUser = async (req, res) => {
     await user.save();
     await sendOtpEmail(email, otp);
 
-    // ✅ log activity (new user)
     await logActivity({
       req,
       userId: user._id,
@@ -359,7 +356,7 @@ const sendOtpEmail = async (to, otp) => {
     });
 
     const mailOptions = {
-        from: `"Your App Name" <${process.env.EMAIL_USER}>`,
+        from: `"Sajilo" <${process.env.EMAIL_USER}>`,
         to,
         subject: 'Your OTP Code',
         html: `<p>Hello,</p><p>Your OTP is: <b>${otp}</b></p><p>This OTP is valid for 10 minutes.</p>`
