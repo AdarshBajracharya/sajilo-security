@@ -1,25 +1,15 @@
 import axios from "axios";
-// creating an instance of axios
+
 const Api = axios.create({
-    baseURL: process.env['REACT_APP_BACKEND_URL'] || "https://localhost:5000",
-    withCredentials: true,
+    baseURL: process.env['REACT_APP_BACKEND_URL'] || "https://localhost:5000", withCredentials: true,
     headers: {
         "Access-Control-Allow-Credentials": "true",
-        // "Content-Type":"multipart/from-data"
     }
-
 });
 
 const token = localStorage.getItem('token');
 
 
-// if (!token) {
-//     console.error('No token found in localStorage!');
-//     // You can also redirect to login page here, or throw an error
-//     // For example, if using React Router:
-//     // window.location.href = "/login";
-//     throw new Error("User not authenticated");
-// }
 
 const config = {
     headers: {

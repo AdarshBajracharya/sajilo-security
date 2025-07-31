@@ -60,7 +60,7 @@ app.use(morgan(logFormat, { stream: logStream }));
 
 // app.use(limiter)
 
-//cors config
+
 const corsOptions = {
   origin: true,
   credentials: true,
@@ -69,7 +69,7 @@ const corsOptions = {
 }
 app.use(cors(corsOptions))
 
-//configuration dotenv
+
 dotenv.config()
 
 
